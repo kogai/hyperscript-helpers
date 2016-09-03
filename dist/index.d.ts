@@ -152,4 +152,7 @@ declare type HyperScriptHelpers = {
   xmp: HyperScriptHelperFn;
 }
 
-export default function hh(h: Function): HyperScriptHelpers;
+declare module "hyperscript-helpers" {
+  function hh(h: Function): HyperScriptHelpers;
+  export = hh;
+}
